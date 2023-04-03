@@ -1,0 +1,231 @@
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  background-color: #121314;
+}
+
+input {
+  display: none;
+}
+
+.grid {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+}
+
+.grid > * {
+  position: relative;
+}
+
+label {
+  display: block;
+  cursor: pointer;
+  position: absolute;
+  width: 50vw;
+  height: 50vw;
+  max-width: 150px;
+  max-height: 150px;
+}
+
+@media (min-aspect-ratio: 1/1) {
+  label {
+    width: 50vh;
+    height: 50vh;
+  }
+}
+
+.menu--1 label,
+.menu--2 label {
+  bottom: 0;
+}
+
+.menu--3 label,
+.menu--4 label {
+  top: 0;
+}
+
+.menu--1 label,
+.menu--3 label {
+  right: 0;
+}
+
+.menu--2 label,
+.menu--4 label {
+  left: 0;
+}
+
+path {
+  fill: none;
+  stroke: #ffffff;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  --length: 24;
+  --offset: -38;
+  stroke-dasharray: var(--length) var(--total-length);
+  stroke-dashoffset: var(--offset);
+  transition: all 0.8s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+circle {
+  fill: #fff3;
+  opacity: 0;
+}
+
+label:hover circle {
+  opacity: 1;
+}
+
+.cross input:checked + svg .line--1,
+.cross input:checked + svg .line--3 {
+  --length: 22.627416998;
+}
+
+.cross input:checked + svg .line--2 {
+  --length: 0;
+}
+
+.back input:checked + svg .line--1,
+.back input:checked + svg .line--3 {
+  --length: 8.602325267;
+}
+
+.menu--1 {
+  background-color: #3f77e9;
+}
+
+.menu--1 .line--1,
+.menu--1 .line--3 {
+  --total-length: 126.64183044433594;
+}
+
+.menu--1 .line--2 {
+  --total-length: 70;
+}
+
+.menu--1 input:checked + svg .line--1,
+.menu--1 input:checked + svg .line--3 {
+  --offset: -94.1149185097;
+}
+
+.menu--1 input:checked + svg .line--2 {
+  --offset: -50;
+}
+
+.menu--2 {
+  background-color: #0095f9;
+}
+
+.menu--2 .line--1,
+.menu--2 .line--3 {
+  --total-length: 111.22813415527344;
+  --offset: -50.22813415527344;
+}
+
+.menu--2 .line--2 {
+  --total-length: 99;
+}
+
+.menu--2 input:checked + svg path {
+  transform: translateX(30px);
+}
+
+.menu--2 input:checked + svg .line--1,
+.menu--2 input:checked + svg .line--3 {
+  --offset: -16.9705627485;
+}
+
+.menu--2 input:checked + svg .line--2 {
+  --offset: -20;
+}
+
+.menu--3 {
+  background-color: #00aef6;
+}
+
+.menu--3 .line--1,
+.menu--3 .line--3 {
+  --total-length: 126.38166809082031;
+}
+
+.menu--3 .line--2 {
+  --total-length: 80;
+}
+
+.menu--3 input:checked + svg .line--1,
+.menu--3 input:checked + svg .line--3 {
+  --offset: -109.1770175568;
+}
+
+.menu--4 {
+  background-color: #18bee5;
+}
+
+.menu--4 .line--1,
+.menu--4 .line--3 {
+  --total-length: 103.35061645507812;
+  --offset: -42.35061645507812;
+}
+
+.menu--4 .line--2 {
+  --total-length: 99;
+}
+
+.menu--4 input:checked + svg path {
+  transform: translateX(31px);
+}
+
+.menu--4 input:checked + svg .line--1,
+.menu--4 input:checked + svg .line--3 {
+  --offset: -8.602325267;
+}
+
+.menu--4 input:checked + svg .line--2 {
+  --offset: -7;
+}
+
+.debug {
+  display: none;
+}
+
+.line--debug {
+  opacity: 0;
+  stroke-dasharray: none;
+}
+
+@media screen and (min-width: 800px) {
+  .debug {
+    opacity: 0.8;
+    display: block;
+    position: absolute;
+    z-index: 1;
+    font-family: sans-serif;
+    transform: rotate(-45deg);
+    transform-origin: 0% 100%;
+    background: #000;
+    color: #fff;
+    width: 150px;
+    height: 100px;
+    line-height: 150px;
+    text-align: center;
+    user-select: none;
+  }
+  .debug:hover {
+    opacity: 1;
+  }
+  .debug.active {
+    background: #fff;
+    color: #000;
+  }
+
+  .debug.active + .grid path.line--debug {
+    opacity: 0.2;
+  }
+}

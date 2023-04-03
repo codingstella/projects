@@ -1,0 +1,132 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Merriweather, serif;
+	margin: 0;
+	padding: 1rem;
+	display: grid;
+	place-items: center;
+	min-height: 100vh;
+	background: #1b1f21;
+}
+
+img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	transform: translate3d(100%, 0, 0);
+	transition: transform 300ms;
+	pointer-events: none;
+}
+
+.img-wrapper {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+.grid {
+	--track: 1;
+	display: grid;
+	max-width: 85rem;
+	width: 100%;
+	transition: grid-template 300ms;
+}
+
+.item {
+	--i: 0.5rem;
+	--c1: deeppink;
+	--c2: orange;
+	
+	background: repeating-linear-gradient(var(--a, 45deg), var(--c1), var(--c1) var(--i), var(--c2) var(--i), var(--c2) calc(var(--i) * 2));
+	display: grid;
+	place-items: center;
+	grid-template: 1fr / 1fr var(--innerTrack, 0);
+	overflow: hidden;
+	aspect-ratio: 8 / 3;
+	transition: filter 200ms;
+}
+
+.item:hover {
+	grid-template: 1fr / 1fr var(--innerTrack, 0);
+}
+
+.item:hover img {
+	opacity: 1;
+	transform: translate3d(0, 0, 0);
+}
+
+.item:nth-child(2),
+.item:nth-child(3) {
+	--c2: darkorchid;
+	--p: 50% 100%;
+	background: repeating-radial-gradient(circle at var(--p), var(--c1), var(--c1) var(--i), var(--c2) var(--i), var(--c2) calc(var(--i) * 2));
+}
+
+.item:nth-child(3) {
+	--p: 50% 0;
+	--c1: cornflowerblue;
+}
+
+.item:nth-child(4) {
+	--a: -45deg;
+	--c1: cornflowerblue;
+	--c2: turquoise;
+}
+
+.item p {
+	background: black;
+	color: white;
+	padding: 0.5rem 0.75rem;
+	font-size: clamp(1.1rem, 5vmin, 2.8rem);
+	transition: opacity 300ms;
+}
+
+.grid:has(.item:first-child:hover) .item:not(:first-child),
+.grid:has(.item:nth-child(2):hover) .item:not(:nth-child(2)),
+.grid:has(.item:nth-child(3):hover) .item:not(:nth-child(3)),
+.grid:has(.item:nth-child(4):hover) .item:not(:nth-child(4)) {
+	filter: grayscale(10%) brightness(250%) contrast(30%);
+}
+
+.grid:has(.item:first-child:hover) .item:not(:first-child) p,
+.grid:has(.item:nth-child(2):hover) .item:not(:nth-child(2)) p,
+.grid:has(.item:nth-child(3):hover) .item:not(:nth-child(3)) p,
+.grid:has(.item:nth-child(4):hover) .item:not(:nth-child(4)) p {
+	opacity: 0;
+}
+
+@media (min-width: 50em) {
+	.grid {
+		grid-template: 1fr 1fr / 1fr 1fr;
+		aspect-ratio: 2 / 1;
+	}
+	
+	.item {
+		aspect-ratio: auto;
+	}
+	
+	.grid:has(.item:first-child:hover) {
+		grid-template: var(--track) 1fr / var(--track) 1fr;
+	}
+
+	.grid:has(.item:nth-child(2):hover) {
+		grid-template: var(--track) 1fr / 1fr var(--track);
+	}
+
+	.grid:has(.item:nth-child(3):hover) {
+		grid-template: 1fr var(--track) / var(--track) 1fr;
+	}
+
+	.grid:has(.item:nth-child(4):hover) {
+		grid-template: 1fr var(--track) / 1fr var(--track);
+	}
+}

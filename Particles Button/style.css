@@ -1,0 +1,30 @@
+particle {
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  overflow: hidden;
+  text-align: center;
+}
+
+button {
+  padding: 20px;
+  margin: 10px;
+  align-self: center;
+}
+
+.preloader {
+  position: absolute;
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/127738/mario-face.png);
+}

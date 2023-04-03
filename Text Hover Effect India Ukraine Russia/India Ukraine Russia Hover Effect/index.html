@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Text Hover Effects</title>
+  <link rel="stylesheet" href="style.css">
+<style type="text/css" id="dcoder_stylesheet">@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+ul
+{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+ul li
+{
+  list-style: none;
+  text-align: center;
+  color: #333;
+  text-decoration: none;
+  font-size: 3em;
+  padding: 5px 20px;
+  font-weight: 700;
+  transition: 0.5s;
+  cursor: pointer;
+  border-radius: 10px;
+  text-align: center;
+  -webkit-text-stroke: 0px #fff;
+}
+ul:hover li
+{
+  color: transparent;
+  -webkit-text-stroke: 1px #0006;
+}
+ul li:hover
+{
+  color: #333;
+  background: #fff;
+  -webkit-text-stroke: 0px #fff;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.075);
+}
+ul li:before
+{
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18vw;
+  color: rgba(0,0,0,0.05);
+  text-transform: uppercase;
+  z-index: -1;
+  font-weight: 900;
+  letter-spacing: 500px;
+  transition: 0.5s;
+  opacity: 0;
+  transition: 0.5s;
+}
+ul li:hover:before
+{
+  content: attr(data-text);
+  opacity: 1;
+  left: 50%;
+  letter-spacing: 10px;
+  -webkit-text-stroke: 0px #fff;
+}
+ul li:nth-child(1):before
+{
+  background: linear-gradient(#ff9a33 0%,#ff9a33 33%,#fff 33%,#fff 66%,#138807 66%,#138807 100%);
+}
+ul li:nth-child(2):before
+{
+  background: linear-gradient(#005bbc,#005bbc 50%,#ffd600 50%,#ffd600 100%);
+}
+ul li:nth-child(3):before
+{
+  background: linear-gradient(#ffffff 0%,#ffffff 33%,#0039a6 33%,#0039a6 66%,#d52b1e 66%,#d52b1e 100%);
+}</style></head>
+<body>
+  <ul>
+    <li data-text="India">India</li>
+    <li data-text="Ukraine">Ukraine</li>
+    <li data-text="Russia">Russia</li>
+  </ul>
+
+</body></html>
+

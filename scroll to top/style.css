@@ -1,0 +1,128 @@
+  @import url('https://fonts.googleapis.com/css?family=Muli:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&subset=latin-ext,vietnamese');
+
+  body{background-color: #1f2029 !important;
+  	margin:0;
+  	padding:0;
+  }
+
+#button {
+  display: inline-block;
+  background-color:#dc3545;
+  width: 50px;
+  height: 50px;
+  line-height:60px;
+  text-align: center;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color .3s, 
+  opacity .5s, visibility .5s;
+  opacity: 0;
+  z-index: 1000;
+}
+
+#button i{
+  font-size:32px;
+  color:white;
+}
+
+
+
+#button:hover {
+  cursor: pointer;
+  background-color: #333;
+}
+
+#button.show {
+  opacity: 1;
+}
+
+/* Styles for the content section */
+
+.content {
+  width: 77%;
+  margin: 50px auto;
+  font-family: 'Muli', sans-serif;
+  font-size: 17px;
+  color: #6c767a;
+  line-height: 1.9;
+}
+@media (min-width: 500px) {
+  .content {
+    width: 43%;
+  }
+  #button {
+    margin: 30px;
+  }
+}
+
+
+h1{
+    font-family: 'Muli', sans-serif;
+	font-size: 12vw;
+	font-weight: 900;
+	line-height: 1;
+	color: var(--white);
+	-webkit-transition: all 200ms linear;
+	transition: all 200ms linear; 
+}
+.content h2 {
+  color:#dc3545;
+  font-size: 31px;
+  text-transform:capitalize;
+ font-weight: 800;
+}
+
+.content h3 {
+  color: #96a2a7;
+  font-size: 23px;
+    text-transform:capitalize;
+    font-weight: 800;
+}
+
+p{
+  color:#b5b5b5;
+   font-size:16px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

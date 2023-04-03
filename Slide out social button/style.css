@@ -1,0 +1,89 @@
+body {
+  background: linear-gradient(90deg, #FF8008 10%, #FFC837 90%);
+  padding: 2em;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.share-buttons {
+  position: absolute;
+  width: 300px;
+  height: 212px;
+  padding-left: 135px;
+  top: 50%;
+  left: 50%;
+  margin-left: -150px;
+  margin-top: -106px;
+}
+.share-buttons .share-button {
+  float: left;
+  margin-top: 15px;
+}
+.share-buttons .share-button:first-child {
+  margin-top: 0;
+}
+.share-buttons .share-button:after {
+  clear: both;
+  display: table;
+}
+
+.share-button {
+  display: block;
+  position: relative;
+  height: 30px;
+}
+.share-button:hover {
+  cursor: pointer;
+}
+.share-button:hover .share-button-primary {
+  box-shadow: 1px 0 0 0 rgba(0, 0, 0, 0.1);
+}
+.share-button:hover .share-button-secondary-content {
+  transform: translate3d(0, 0, 0);
+}
+
+.share-button-primary {
+  position: absolute;
+  background: #fff;
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  left: 0;
+  top: 50%;
+  margin-top: -15px;
+}
+
+.share-button-icon {
+  display: block;
+  color: #242424;
+  position: absolute;
+  width: 30px;
+  line-height: 30px;
+  font-size: 16px;
+  margin-top: 1px;
+}
+
+.share-button-secondary {
+  overflow: hidden;
+  margin-left: 15px;
+  height: 30px;
+}
+
+.share-button-secondary-content {
+  font-family: sans-serif;
+  font-size: 0.75em;
+  background: #fff;
+  display: block;
+  height: 30px;
+  text-align: left;
+  padding-left: 24px;
+  padding-right: 18px;
+  line-height: 30px;
+  color: #242424;
+  border-radius: 0 15px 15px 0;
+  transform: translate3d(-100%, 0, 0);
+  transition: transform 175ms ease;
+}

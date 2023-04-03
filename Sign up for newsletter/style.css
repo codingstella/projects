@@ -1,0 +1,103 @@
+@import url('https://rsms.me/inter/inter-ui.css');
+body {
+  align-items: center;
+  background: linear-gradient(-45deg, #210242, #9198e5);
+  display: flex;
+  font-family: 'Inter UI', sans-serif;
+  height: 100vh;
+  justify-content: center;
+  margin: 0;
+  width: 100vw;
+}
+.card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  height: 200px;
+  overflow: hidden;
+  padding: 20px;
+  position: relative;
+  width: 300px;
+}
+.title {
+  font-size: 1.5em;
+  height: 29px;
+  margin-bottom: 0;
+}
+.text {
+  color: #667;
+  font-size: 1em;
+  height: 38px;
+  margin: 5px 0 0;
+}
+.line {
+  left: 0;
+  position: absolute;
+  width: 340px;
+}
+.line path {
+  fill: none;
+  stroke: black;
+  stroke-width: 2;
+  stroke-dasharray: 300 1903;
+}
+.card.saving .line path {
+  stroke-dashoffset: -472;
+  stroke-dasharray: 153 1903;
+  transition: stroke-dasharray 500ms, stroke-dashoffset 500ms;
+}
+.card.done .line path {
+  stroke-dashoffset: -762;
+  stroke-dasharray: 1095 1903;
+  transition: stroke-dasharray 1500ms, stroke-dashoffset 1500ms;
+}
+.line2 {
+  height: 52px;
+  left: 150px;
+  opacity: 0;
+  position: absolute;
+  stroke-dasharray: 6 48;
+  stroke-dashoffset: -42;
+  top: 158px;
+  transform-origin: 50%;
+  width: 50px;
+}
+.card.saving .line2 {
+  animation: 4s 500ms Rotate forwards;
+}
+.card.done .line2 {
+  animation: 500ms ScaleDown forwards;
+}
+.form {
+  transform-origin: 0 50%;
+  transition: transform 500ms, opacity 500ms;
+}
+.card.saving .form {
+  transform: translateY(-16px) scale(.8);
+}
+.card.done .form {
+  transform: translateY(-16px) scale(.8);
+  opacity: 0;
+}
+.input {
+  background: transparent;
+  border: 0;
+  box-sizing: border-box;
+  font-size: 20px;
+  height: 40px;
+  margin-top: 20px;
+  outline: none !important;
+  position: relative;
+  width: 300px;
+}
+@keyframes Rotate {
+  0% { transform: rotate(0); opacity: 1; }
+  25% { transform: rotate(360deg); opacity: 1; }
+  50% { transform: rotate(720deg); opacity: 1; }
+  75% { transform: rotate(1080deg); opacity: 1; stroke-dasharray: 6 48; stroke-dashoffset: -42;}
+  100% { transform: rotate(1080deg); opacity: 1; stroke-dashoffset: 0; stroke-dasharray: 36 48;}
+}
+@keyframes ScaleDown {
+  0% { transform: scale(1); }
+  100% { transform: scale(0);}
+}
