@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Loading Liquid Animation</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="container">
+	<span>LOADING</span>
+	<span class="drop"></span>
+</div>
+
+<svg>
+	<defs>
+		<filter id="gooey">
+			<feGaussianBlur in="SourceGraphic" stdDeviation="5" result="blur"/>
+			<feColorMatrix in="blur" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 35 -20" result="gooey" />
+			<feComposite in="SourceGraphic" in2="gooey" operator="atop" />
+		</filter>
+	</defs>
+</svg>
+<!-- partial -->
+  
+</body>
+</html>

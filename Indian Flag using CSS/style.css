@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: #888;
+  overflow: hidden;
+}
+.parent {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  transform: rotate(-30deg) scale(2.5);
+}
+
+.orange,
+.white,
+.green {
+  height: 33.33%;
+  width: 100%;
+  transition: all 2s;
+}
+.orange {
+  background: #ff9933;
+}
+.white {
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.green {
+  background: #138808;
+}
+
+.white img {
+  width: 10%;
+  animation: rotate 3s infinite linear;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

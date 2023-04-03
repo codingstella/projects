@@ -1,0 +1,53 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #0d0c24;
+}
+/* Decoration */
+h1.title {
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  font-size: 9vw;
+  margin: 0.5em 0;
+}
+p.text {
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 2em;
+  text-align: justify;
+  padding: 0 1.4em;
+  letter-spacing: 0.02em;
+}
+/* Decoration Ends */
+
+/* Code For Custom Scrollbar Starts Here */
+/* For firefox */
+.sub-div {
+  max-height: 100vh;
+  overflow-y: scroll;
+  /*Thumb color and background color for firefox */
+  scrollbar-color: #00c6ff #242942;
+  overflow-x: none;
+}
+/*  ::-webkit- is for chrome */
+::-webkit-scrollbar {
+  width: 1.2em;
+  overflow-x: none;
+}
+::-webkit-scrollbar-track {
+  background-color: #242942;
+  margin-block: 0.25em;
+  border-radius: 0.3em;
+}
+::-webkit-scrollbar-thumb {
+  background: #00c6ff;
+  background: -webkit-linear-gradient(to right, #00c6ff, #0072ff);
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  border-radius: 0.3em;
+}

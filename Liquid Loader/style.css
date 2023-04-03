@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+
+* {
+  margin: 0;
+
+  padding: 0;
+
+  box-sizing: border-box;
+
+  font-family: "Poppins";
+
+  font-size: 10px;
+}
+
+.container {
+  width: 100%;
+
+  min-height: 100vh;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  background: linear-gradient(45deg, #006bc6, #1ecafc);
+}
+
+.loader {
+  position: relative;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+}
+
+.loader h2 {
+  position: absolute;
+
+  color: #fff;
+
+  font-size: 2.5rem;
+
+  font-weight: 500;
+
+  animation: animateText 5s ease-in-out infinite;
+}
+
+.loader .drops {
+  position: relative;
+
+  width: 300px;
+
+  height: 300px;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  filter: url(#Gooey);
+}
+
+.loader .drops span {
+  position: absolute;
+
+  left: 0;
+
+  transform-origin: 150px;
+
+  width: 100px;
+
+  height: 100px;
+
+  background: #fff;
+
+  border-radius: 50%;
+
+  animation: animateDrops 5s ease-in-out infinite;
+
+  animation-delay: calc(0.15s * var(--i));
+}
+
+@keyframes animateDrops {
+  0% {
+    width: 100px;
+    height: 100px;
+    transform: rotate(0deg) translateX(120px);
+  }
+  40%,
+  70% {
+    width: 40px;
+    height: 40px;
+    transform: rotate(calc(360deg / 8 * var(--i)));
+    box-shadow: 0 0 0 10px #fff;
+  }
+  90%,
+  100% {
+    width: 100px;
+    height: 100px;
+    transform: rotate(0deg) translateX(120px);
+  }
+}
+
+@keyframes animateText {
+  0% {
+    opacity: 0;
+  }
+  40%,
+  70% {
+    opacity: 1;
+  }
+  90%,
+  100% {
+    opacity: 0;
+  }
+}
+
+svg {
+  width: 0;
+  height: 0;
+}
