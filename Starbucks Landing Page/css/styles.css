@@ -1,0 +1,347 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+
+body{
+  overflow-x: hidden;
+}
+
+header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  margin: 10px auto;
+}
+
+header .left-side a img{
+  width: 80px;
+}
+
+header .right-side{
+  display: flex;
+}
+
+header .right-side .nav-link-wrapper a{
+  padding: 10px;
+  margin: 10px;
+  text-decoration: none;
+  color: black;
+}
+
+.container{
+  max-width: 80%;
+  margin: 50px auto;
+}
+
+.container .left-side{
+  text-align: center;
+}
+
+.container .left-side h1{
+  font-size: 60px;
+  letter-spacing: 2px;
+}
+
+.container .left-side h1 .green{
+  color: green;
+  font-family: 'Viga', serif;
+}
+
+.container .left-side p{
+  font-size: 20px;
+  letter-spacing: 0.5px;
+}
+
+.container .left-side a{
+  display: inline-block;
+  background: green;
+  padding: 12px 18px 12px 18px;
+  text-decoration: none;
+  border-radius: 25px;
+  color: white;
+  margin-top: 15px;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.container .right-side{
+  text-align: center;
+  margin-top: 60px;
+}
+
+.container .right-side img{
+  max-width: 50%;
+}
+
+.container .right-side .box{
+  position: absolute;
+  display: grid;
+  right: 0%;
+  bottom: 0%;
+}
+
+.container .right-side .box img{
+  width: 25px;
+  margin: 10px;
+}
+
+.container .right-side .box img.facebook{
+  width: 18.5px;
+}
+
+.thumb{
+  display: flex;
+  margin-top: -60px;
+  justify-content: center;
+}
+
+.thumb a:hover{
+  margin-top: -15px;
+  transition: 0.2s;
+}
+
+.thumb img{
+  width: 54px;
+  margin: 20px;
+}
+
+@media (min-width: 1140px){
+  *{
+    margin: 0px;
+    padding: 0px;
+  }
+
+  body{
+    overflow-x: hidden;
+  }
+
+  header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    margin: 10px auto;
+  }
+
+  header .left-side a img{
+    width: 80px;
+  }
+
+  header .right-side{
+    display: flex;
+  }
+
+  header .right-side .nav-link-wrapper a{
+    padding: 10px;
+    margin: 10px;
+    text-decoration: none;
+    color: black;
+  }
+
+  .container{
+    max-width: 90%;
+    margin: 50px auto;
+    display: flex;
+  }
+
+  .container .left-side{
+    text-align: left;
+    flex: 1;
+  }
+
+  .container .left-side h1{
+    font-size: 60px;
+    letter-spacing: 2px;
+  }
+
+  .container .left-side h1 .green{
+    color: green;
+    font-family: 'Viga', serif;
+  }
+
+  .container .left-side p{
+    font-size: 20px;
+    letter-spacing: 0.5px;
+  }
+
+  .container .left-side a{
+    display: inline-block;
+    background: green;
+    padding: 12px 18px 12px 18px;
+    text-decoration: none;
+    border-radius: 25px;
+    color: white;
+    margin-top: 15px;
+    font-size: 17px;
+    font-weight: bold;
+  }
+
+  .container .right-side{
+    flex: 1;
+    text-align: center;
+  }
+
+  .container .right-side img{
+    width: 330px;
+    margin-left: 150px;
+    margin-top: -30px;
+  }
+
+  .container .right-side .box{
+    display: grid;
+    position: absolute;
+    bottom: 40%;
+    right: 1%;
+  }
+
+  .container .right-side .box img{
+    width: 25px;
+    margin: 10px;
+  }
+
+  .container .right-side .box img.facebook{
+    width: 18.5px;
+  }
+
+  .thumb{
+    position: absolute;
+    bottom: 0%;
+    left: 40%;
+  }
+
+  .thumb a:hover{
+    margin-top: -15px;
+    transition: 0.2s;
+  }
+
+  .thumb img{
+    width: 54px;
+    margin: 20px;
+  }
+}
+
+@media only screen and (max-width: 650px){
+  header{
+    display: block;
+  }
+
+  header .left-side a img{
+    width: 80px;
+    margin: auto;
+    display: block;
+  }
+
+  header .right-side{
+    display: flex;
+    justify-content: center;
+    margin-top: 35px;
+  }
+
+  header .right-side .nav-link-wrapper a{
+    padding: 10px;
+    margin: 10px;
+    text-decoration: none;
+    color: black;
+  }
+  .container{
+    max-width: 80%;
+    margin: 50px auto;
+  }
+
+  .container .left-side{
+    text-align: center;
+  }
+
+  .container .left-side h1{
+    font-size: 50px;
+    letter-spacing: 2px;
+  }
+
+  .container .left-side h1 .green{
+    color: green;
+    font-family: 'Viga', serif;
+  }
+
+  .container .left-side p{
+    font-size: 18px;
+    letter-spacing: 0.5px;
+  }
+
+  .container .left-side a{
+    display: inline-block;
+    background: green;
+    padding: 12px 18px 12px 18px;
+    text-decoration: none;
+    border-radius: 25px;
+    color: white;
+    margin-top: 15px;
+    font-size: 16.2px;
+    font-weight: bold;
+  }
+}
+
+@media only screen and (max-width: 404px){
+  header{
+    display: block;
+  }
+
+  header .left-side a img{
+    width: 80px;
+    margin: auto;
+    display: block;
+  }
+
+  header .right-side{
+    display: flex;
+    justify-content: center;
+    margin-top: 35px;
+  }
+
+  header .right-side .nav-link-wrapper a{
+    padding: 5px;
+    margin: 5px;
+    text-decoration: none;
+    color: black;
+  }
+  .container .right-side img{
+    width: 330px;
+    margin-top: -30px;
+  }
+  .container .right-side img{
+    max-width: 50%;
+  }
+
+  .container .right-side .box{
+    display: none;
+    position: absolute;
+    bottom: 250px;
+    right: 25px;
+  }
+
+  .container .right-side .box img{
+    width: 25px;
+    margin: 10px;
+  }
+
+  .container .right-side .box img.facebook{
+    width: 18.5px;
+  }
+
+  .thumb{
+    display: flex;
+    margin-top: -30px;
+    justify-content: center;
+  }
+
+  .thumb a:hover{
+    margin-top: -15px;
+    transition: 0.2s;
+  }
+
+  .thumb img{
+    width: 45px;
+    margin: 20px;
+  }
+}
