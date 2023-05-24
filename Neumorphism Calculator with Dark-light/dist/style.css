@@ -1,0 +1,227 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  --bg: #f5f6f7;
+  --color-text: #9c9c9c;
+  --color-orange: #ff6a00;
+  --color-shadow: -4px -2px 4px 0px #ffffff,
+                  4px 2px 6px 0px #DFE4EA;
+  --color-inset-shadow: inset -2px -2px 6px rgba(255,255,255,0.8),
+                      inset 2px 2px 6px rgba(0,0,0,0.1);
+  --color-equal-shadow: -2px -2px 6px rgb(3, 169, 244, 0.01),
+                      2px 2px 6px rgba(0,0,0,0.3);
+  --color-equal-inset-shadow: inset -2px -2px 6px rgba(255, 106, 0,0.5),
+                          inset 2px 2px 6px rgba(0,0,0,0.3);
+}
+
+html[data-theme=dark] {
+  --bg: #131419;
+  --color-text: #fff;
+  --color-orange: #ff6a00;
+  --color-shadow: -3px -3px 10px rgba(255,255,255,0.05),
+                  3px 3px 15px rgba(0,0,0,0.5);
+  --color-inset-shadow: inset -2px -2px 6px rgba(255,255,255,0.01),
+                      inset 2px 2px 6px rgba(0,0,0,0.8);
+  --color-equal-shadow: -2px -2px 6px rgb(3, 169, 244, 0.01),
+                          2px 2px 6px rgba(0,0,0,0.8);
+  --color-equal-inset-shadow: inset -2px -2px 6px rgba(255, 106, 0,0.2),
+                              inset 2px 2px 6px rgba(0,0,0,0.5);
+}
+
+button {
+  outline: none;
+}
+
+body {
+  background-color: var(--bg);
+}
+
+.main {
+  width: 300px;
+  height: 560px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  background-color: var(--bg);
+  box-shadow: var(--color-shadow);
+  overflow: hidden;
+}
+
+.heading {
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: 0 1.75rem;
+}
+
+.heading span {
+  color: var(--color-text);
+  font-size: 1.125rem;
+}
+
+.heading span:nth-child(1),
+.heading span:nth-child(3) {
+  cursor: pointer;
+  font-size: 0.9375rem;
+}
+
+.heading span:nth-child(2) {
+  margin-top: 5px;
+}
+
+.heading span:nth-child(2)::after {
+  width: 115px;
+  content: "";
+  position: absolute;
+  bottom: -5%;
+  border-bottom: 3px solid var(--color-orange);
+  z-index: 100;
+  left: 30%;
+  border-radius: 0.625rem;
+}
+
+#result {
+  height: 30%;
+  position: relative;
+  background-color: var(--bg);
+  border-top: 3px solid rgba(0, 0, 0, 0.05);
+  border-bottom: 3px solid rgba(0, 0, 0, 0.05);
+}
+
+#history-value {
+  position: absolute;
+  text-align: right;
+  bottom: 30%;
+  right: 5%;
+  font-size: 2rem;
+  color: var(--color-text);
+}
+
+#output-value {
+  position: absolute;
+  text-align: right;
+  bottom: 2%;
+  right: 5%;
+  font-size: 2rem;
+  color: var(--color-text);
+}
+
+#keyboard {
+  padding: 1.875rem 1.25rem;
+}
+
+.operator,
+.number {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: none;
+  background-color: var(--bg);
+  font-weight: 900;
+  font-size: 1.125rem;
+  cursor: pointer;
+  box-shadow: var(--color-shadow);
+}
+
+.group {
+  width: 185px;
+  float: left;
+}
+
+.top-section {
+  height: auto;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  padding: 0.25rem 0.375rem;
+  border-radius: 1.875rem;
+  justify-content: space-between;
+  margin-left: 0.625rem;
+  background: var(--bg);
+  box-shadow: var(--color-shadow);
+}
+
+.top-section button {
+  margin-top: 0.125rem;
+}
+
+.middle-section {
+  height: auto;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.25rem;
+  border-radius: 1.875rem;
+  margin-top: 0.125rem;
+  margin-left: 0.2rem;
+}
+
+.middle-section button {
+  margin: 0.1875rem 0.3125rem;
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.side-section {
+  float: left;
+  height: 254px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 0.3125rem 0.25rem;
+  border-radius: 1.875rem;
+  justify-content: space-between;
+  margin-left: 0.625rem;
+  background: var(--bg);
+  box-shadow: var(--color-shadow);
+}
+
+.side-section button {
+  margin-left: 0.125rem;
+}
+
+.equal {
+  background-color: var(--color-orange);
+  color: #fff !important;
+  box-shadow: var(--color-equal-shadow);
+}
+
+.operator {
+  color: var(--color-orange);
+}
+
+.operator:active,
+.number:active,
+.operator:hover,
+.number:hover {
+  box-shadow: var(--color-inset-shadow);
+}
+
+.equal:active,
+.equal:hover {
+  background: var(--color-orange);
+  box-shadow: var(--color-equal-inset-shadow);
+}
+
+.fas {
+  cursor: pointer;
+}
+
+label input[type=checkbox] {
+  -webkit-appearance: none;
+}
+
+label input[type=checkbox]:checked ~ .fas {
+  color: var(--color-orange);
+}

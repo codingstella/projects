@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Absolute Password Validator</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="container">
+        <div class="formbox">
+            <div class="inner"></div>
+            <div><i class="fas fa-lock"></i></div>
+            <div><input type="password" 
+                    placeholder="Password" 
+                    id="myPass" required 
+                    oninput="textChange()">
+            </div>
+            <div>
+                <span class="showPass" >
+                    <img  class="eye-close" id="img1" src="https://i.postimg.cc/HWMtCN1m/eye-close.png" alt="eye" 
+                        onclick="toggle()"
+                        >
+                </span>
+            </div>    
+        </div>
+        <div class="validator">
+            <p id="capital">
+                <i class="fas fa-times"></i>
+                <i class="fas fa-check"></i>
+                <span>Upper Case</span>
+            </p>
+            <p id="special-char">
+                <i class="fas fa-times"></i>
+                <i class="fas fa-check"></i>
+                <span>Special Character</span>
+            </p>
+            <p id="number">
+                <i class="fas fa-times"></i>
+                <i class="fas fa-check"></i>
+                <span>Number</span>
+            </p>
+            <p id="more-than-8">
+                <i class="fas fa-times"></i>
+                <i class="fas fa-check"></i>
+                <span>More than 8 characters</span>
+            </p>
+        </div>
+    </div>
+<!-- partial -->
+  <script src='https://kit.fontawesome.com/1c2c2462bf.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

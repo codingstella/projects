@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800&display=swap");
+body {
+  margin: 0;
+  color: #34495e;
+  font-family: "Poppins", sans-serif;
+  height: 100%;
+}
+
+.container,
+.formbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  height: 100vh;
+  background: #6fa5f6;
+  flex-direction: column;
+}
+
+.formbox {
+  background: #121726;
+  width: 350px;
+  height: 80px;
+  border-radius: 5px;
+  overflow: hidden;
+  margin: 0.625rem;
+}
+
+.formbox .fa-lock {
+  color: #fff;
+  font-size: 1.375rem;
+  position: relative;
+  margin-right: 0.3125rem;
+}
+
+#myPass {
+  position: relative;
+  width: 180px;
+  margin-right: 0.9375rem;
+}
+
+input {
+  border-radius: 0.3125rem;
+  border: none;
+  color: #575dbc;
+  font-size: 1.375rem;
+  outline: none;
+  margin-left: 0.9375rem;
+  display: inline;
+  background: none;
+  transition-delay: 0.2s;
+}
+
+.showPass {
+  position: relative;
+  margin-left: 1.5rem;
+  cursor: pointer;
+}
+
+.inner {
+  background: #ffffff;
+  padding: 40px 50px;
+  border-radius: 5px;
+  width: 250px;
+  clip-path: circle(8% at 87.2% 49.2%);
+  transition: all 0.25s ease-out;
+  position: absolute;
+  overflow: hidden;
+}
+
+.inner-hover {
+  clip-path: circle(75%);
+  background: #fff;
+}
+
+.color-change {
+  transition-delay: 0.2s;
+  color: #121726 !important;
+}
+
+.showPass .eye-open {
+  margin-top: -1px !important;
+  width: 26px;
+  height: 25px !important;
+  transition: all 0.2s ease;
+}
+
+.showPass .eye-close {
+  margin-top: 0.625rem;
+  width: 25px;
+  height: 18px;
+}
+
+.validator {
+  margin-top: 20px;
+  width: 310px;
+  position: relative;
+  height: 190px;
+  overflow: hidden;
+  border-radius: 5px;
+  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.2);
+  padding: 7px 20px 0px;
+  background-color: #121726;
+}
+
+.validator p {
+  opacity: 0.6;
+  transition: all 0.3s ease-out;
+}
+
+.validator p span {
+  font-size: 15px;
+  color: #fff;
+  margin-left: 35px;
+  font-weight: 500;
+}
+
+.validator p i {
+  position: absolute;
+  text-align: center;
+  width: 20px;
+  height: 20px;
+  line-height: 26px;
+  font-size: 15px;
+  border-radius: 50%;
+  color: #ffffff;
+}
+
+.fa-check {
+  opacity: 0;
+}
+
+.fa-times {
+  opacity: 1;
+}

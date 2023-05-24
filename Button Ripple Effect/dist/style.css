@@ -1,0 +1,48 @@
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  align-items: center;
+  background: #121212;
+}
+
+.ripple-btn {
+  position: relative;
+  padding: 1em 1.5em;
+  color: #fff;
+  font-size: 1.15rem;
+  border-radius: 100vmax;
+  background-color: transparent;
+  border: 2px solid #fff;
+  text-transform: uppercase;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+span {
+  position: absolute;
+  border-radius: 50%;
+  font-size: 10px;
+  opacity: 0.5;
+  width: 20em;
+  height: 20em;
+  background: linear-gradient(90deg, #0162c8, #55e7fc);
+  transform: translate(-50%, -50%) scale(0);
+  animation: animate 1s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes animate {
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}

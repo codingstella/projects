@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Neumorphism Calculator with Dark &amp; Light Mode</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="main">
+        <div class="heading">
+            <span><i class="fas fa-bars"></i></span>
+            <span>Calculator</span>
+            <span>
+                <label>
+                    <input type="checkbox" name="theme">
+                    <span class="btn"></span>
+                    <i class="fas fa-moon"></i>
+                </label>
+            </span>
+        </div>
+        <div id="result">
+            <div class="history">
+                <p id="history-value"></p>
+            </div>
+            <div class="output">
+                <p id="output-value"></p>
+            </div>
+        </div>
+        <div id="keyboard">
+            <div class="group">
+                <div class="top-section">
+                    <button class="operator" id="clear">C</button>
+                    <button class="operator" id="backspace">
+                        <i class="fas fa-backspace"></i>
+                    </button>
+                    <button class="operator" id="%">%</button>
+                </div>
+                <div class="middle-section">
+                    <div>
+                        <button class="number" id="7">7</button>
+                        <button class="number" id="8">8</button>
+                        <button class="number" id="9">9</button>
+                    </div>
+                    <div>
+                        <button class="number" id="4">4</button>
+                        <button class="number" id="5">5</button>
+                        <button class="number" id="6">6</button>
+                    </div>
+                    <div>
+                        <button class="number" id="1">1</button>
+                        <button class="number" id="2">2</button>
+                        <button class="number" id="3">3</button>
+                    </div>
+                    <div>
+                        <button class="number" id="00">00</button></td>
+                        <button class="number" id="0">0</button></td>
+                    </div>   
+                </div>
+            </div>
+            <div class="side-section">
+                <button class="operator" id="/">/</button>  
+                <button class="operator" id="*">&times</button>  
+                <button class="operator" id="-">-</button> 
+                <button class="operator" id="+">+</button> 
+                <button class="operator equal" id="=">=</button></td>
+            </div>
+        </div>
+    </div>
+<!-- partial -->
+  <script src='https://kit.fontawesome.com/1c2c2462bf.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
