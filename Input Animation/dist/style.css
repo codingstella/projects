@@ -1,0 +1,66 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #262433;
+  color: #fff;
+  display: grid;
+  place-items: center;
+}
+p {
+  padding-bottom: 16px;
+}
+/* ======================== */
+.input {
+  position: relative;
+}
+.input__field {
+  padding: 10px;
+  width: 270px;
+  border: none;
+  border-radius: 4px;
+  font: inherit;
+  color: #fff;
+  background-color: transparent;
+  outline: 2px solid #fff;
+}
+.input__label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(10px, 10px);
+  transform-origin: left;
+  transition: transform 0.25s;
+}
+.input__field:focus-visible ~ .input__label,
+.input__field:valid ~ .input__label {
+  transform: translate(0, -30px) scale(0.8);
+  color: #d1c5fc;
+}
+
+.input__field:is(:focus-visible, :valid) {
+  outline-color: #d1c5fc;
+}
+.input__icon-wrapper {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+.input__icon {
+  color: #999;
+  font-size: 24px;
+}
+.input__icon:hover {
+  color: #333;
+}
